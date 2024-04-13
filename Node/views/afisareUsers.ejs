@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+
+
+<% if(users.length === 0) { %>
+    <p>Nu exista utilizatori in baza de date</p>
+<% } else { %>
+<% users.forEach(user => { %>
+    <p>Nume utilizator: <%=  user.nume %></p>
+    <p>Prenume utilizator: <%= user.prenume %></p>
+    <br>
+    <% console.log(user.nume) %>
+<% }); } %>
+
+<%- include("partials/footer.ejs") %>
