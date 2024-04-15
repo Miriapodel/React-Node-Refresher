@@ -7,3 +7,5 @@ const __dirname = path.dirname(__filename);
 export const reactPath = path.join(__dirname, "..", "..", "..", "React", "dist");
 
 export const usersPath = path.join(__dirname, "..", "..", "data", "users.json");
+
+export const indexPath = path.join(reactPath, "index.html");

@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import SimpleFormInput from '../inputs/SimpleFormInput';
 
 function UserForm(){
     const [nameValue, setNameValue] = React.useState('');
@@ -40,12 +41,11 @@ function UserForm(){
     return (
         <form onSubmit={handleSubmit}>
             <h1>Introdu datele despre utilizator!</h1>
-            <label for="name">Nume:</label>
-            <input type='text' name='name' id='name' value={nameValue} onChange={(event) => {handleOnChange(event)}}/>
+
+            <SimpleFormInput type="text" id={"name"} labelText={"Nume: "} name={"name"} value={nameValue} handleOnChange={handleOnChange}/>
             <br />
 
-            <label for="surname">Prenume:</label>
-            <input type='text' name='surname' id='surname' value={surnameValue} onChange={(event) => {handleOnChange(event)}}/>
+            <SimpleFormInput type="text" id={"surname"} labelText={"Prenume: "} name={"surname"} value={surnameValue} handleOnChange={handleOnChange}/>
             <br />
 
             <button type='submit'>Trimite</button>

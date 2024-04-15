@@ -22,6 +22,7 @@ function SeeUsers(){
         fetchUsers();
     }, []);
 
+
     return(
         <div>
             <h1>Utilizatorii stocati:</h1>
@@ -30,6 +31,7 @@ function SeeUsers(){
                     <div key={index}>
                         <p>{user.nume}</p>
                         <p>{user.prenume}</p>
+                        <a href={"/getEditUserPage/" + user.id}>Editeaza persoana</a>
                     </div>
                 );
             })}
